@@ -2,7 +2,7 @@
 
 Analyzing how NFL Combine measurables and draft position relate to career success for **defensive players**.
 
-**Status:** In progress
+**Status:** In progress (Phases 1–2 complete in notebook)
 
 ---
 
@@ -19,26 +19,44 @@ How well do combine measurables and draft capital predict NFL career success for
 | **Source** | Kaggle (`combine_data_since_2000_PROCESSED_2018-04-26.csv`) |
 | **Scope** | Combine participants, **2000–2018** (all positions in raw data; analysis focuses on defensive positions) |
 | **Size** | ~6,200 rows, 16 columns (raw); **~2,780** defensive rows in `defensive_combine_clean.csv` |
-| **Outcome** | Pro Football Reference **Approximate Value (AV)** where players are linked via `Pfr_ID` |
+| **Analysis cohort** | **~2,298** defensive players with a valid `Pfr_ID` (career AV is reliable for this group) |
+| **Outcome** | Pro Football Reference **Approximate Value (AV)** |
 
 **Columns (high level):** player info, position, height/weight, combine drills (40-yard, vertical, bench, broad jump, cone, shuttle), draft team/round/pick, year, PFR id, career AV.
 
-**Known limitations:** Missing combine drills and draft fields are common; `AV` is only meaningful for rows with a valid `Pfr_ID`. Recent combine classes (e.g. 2016–2018) may have incomplete career AV. Details documented in the analysis notebooks.
+**Known limitations:** Missing combine drills and draft fields are common; `AV` is only meaningful for rows with a valid `Pfr_ID`. Recent combine classes (e.g. 2016–2018) may have incomplete career AV. Details documented in the analysis notebook.
+
+---
+
+## Key findings (so far)
+
+**Phase 2 — Draft round vs career AV** (PFR-linked defensive players, drafted only for the chart):
+
+| Draft round | Mean career AV | Players |
+|-------------|----------------|---------|
+| 1 | 16.3 | 292 |
+| 7 | 3.5 | 189 |
+
+- Mean AV **declines steadily** from earlier to later rounds.
+- **Undrafted** players in the analysis cohort (n = 506) average **1.6** career AV — well below Round 1.
+
+*Phase 3 (combine measurables vs AV) — planned next.*
 
 ---
 
 ## Planned deliverables
 
 - [x] Cleaned defensive-player dataset (`:data/defensive_combine_clean.csv`)
-- [ ] Exploratory and statistical analysis (Python)
+- [x] Draft round vs career AV analysis (`:notebooks/data_cleaning.ipynb`, Phase 2)
+- [ ] Combine measurables vs career AV (Phase 3)
 - [ ] Interactive dashboard (TBD: Power BI / Tableau / Streamlit)
-- [ ] Key findings and recommendations in this README
+- [x] Key findings in this README (updated as analysis progresses)
 
 ---
 
 ## Tools
 
-- Python, pandas
+- Python, pandas, matplotlib
 - Jupyter Notebook
 - (Dashboard tool TBD)
 
@@ -47,8 +65,8 @@ How well do combine measurables and draft capital predict NFL career success for
 ## Repository structure
 
 ```
-:data/          Raw CSV and cleaned defensive dataset
-:notebooks/     Analysis notebooks
+:data/              Raw CSV and cleaned defensive dataset
+:notebooks/         Analysis notebook (Phases 1–2)
 requirements.txt
 ```
 
@@ -63,7 +81,10 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Open `:notebooks/data_cleaning.ipynb` to reproduce data loading and Phase 1 cleaning.
+Open `:notebooks/data_cleaning.ipynb` and run cells in order:
+
+1. **Phase 1** — Load data, filter defenders, add flags, save `defensive_combine_clean.csv`
+2. **Phase 2** — Mean career AV by draft round (bar chart)
 
 ---
 
