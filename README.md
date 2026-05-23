@@ -17,7 +17,7 @@ How well do combine measurables and draft capital predict NFL career success for
 | | |
 |---|---|
 | **Source** | Kaggle (`combine_data_since_2000_PROCESSED_2018-04-26.csv`) |
-| **Scope** | Combine participants, **2000** (all positions in raw data; analysis focuses on defensive positions) |
+| **Scope** | Combine participants, **2000-2018** (all positions in raw data; analysis focuses on defensive positions) |
 | **Size** | ~6,200 rows, 16 columns |
 | **Outcome** | Pro Football Reference **Approximate Value (AV)** where players are linked via `Pfr_ID` |
 
