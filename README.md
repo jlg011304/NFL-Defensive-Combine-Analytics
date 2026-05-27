@@ -2,7 +2,9 @@
 
 Analyzing how NFL Combine measurables and draft position relate to career success for **defensive players**.
 
-**Status:** In progress (analysis and Tableau dashboard complete)
+**Status:** Complete: analytics dashboard version
+
+This project is version 1; future work includes adding predictive modeling, such as baseline regression and ensemble methods.
 
 ---
 
