@@ -66,6 +66,8 @@ How well do combine measurables and draft capital predict NFL career success for
 
 View the interactive Tableau dashboard: [NFL Defensive Combine Analytics](https://public.tableau.com/views/NFLDefensiveCombineAnalytics/NFLDefensiveCombineDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
+![NFL Defensive Combine Analytics Dashboard](assets/dashboard.png)
+
 ---
 
 ## Planned deliverables
