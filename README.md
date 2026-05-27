@@ -2,7 +2,7 @@
 
 Analyzing how NFL Combine measurables and draft position relate to career success for **defensive players**.
 
-**Status:** In progress (Phases 1–3 complete in notebook)
+**Status:** In progress (Phases 1–4 complete in notebook)
 
 ---
 
@@ -49,13 +49,25 @@ How well do combine measurables and draft capital predict NFL career success for
 - The relationship is **weakly negative**: faster 40-yard times (lower seconds) are associated with higher career AV, but the scatter is wide.
 - Draft round appears to separate career outcomes more clearly than forty time alone.
 
+**Phase 4 — 40-yard dash vs career AV by defensive group** (PFR-linked defenders with a recorded 40-yard time):
+
+| Defensive group | Players | Mean 40-yard time | Mean career AV | Correlation with AV |
+|-----------------|---------|-------------------|----------------|---------------------|
+| DB | 880 | 4.51 | 5.99 | -0.186 |
+| DL/EDGE | 785 | 4.95 | 6.92 | -0.104 |
+| LB | 589 | 4.70 | 7.48 | -0.274 |
+
+- The 40-yard dash has a negative relationship with career AV across all three groups.
+- The relationship is strongest for linebackers and weakest for defensive line / edge players, suggesting speed matters differently by defensive role.
+
 ---
 
 ## Planned deliverables
 
 - [x] Cleaned defensive-player dataset (`:data/defensive_combine_clean.csv`)
 - [x] Draft round vs career AV analysis (`:notebooks/data_cleaning.ipynb`, Phase 2)
-- [x] Combine measurables vs career AV (Phase 3)
+- [x] Cornerback 40-yard dash vs career AV (Phase 3)
+- [x] Defensive group 40-yard dash vs career AV comparison (Phase 4)
 - [ ] Interactive dashboard (TBD: Power BI / Tableau / Streamlit)
 - [x] Key findings in this README (updated as analysis progresses)
 
@@ -73,7 +85,7 @@ How well do combine measurables and draft capital predict NFL career success for
 
 ```
 :data/              Raw CSV and cleaned defensive dataset
-:notebooks/         Analysis notebook (Phases 1–3)
+:notebooks/         Analysis notebook (Phases 1–4)
 requirements.txt
 ```
 
@@ -93,6 +105,7 @@ Open `:notebooks/data_cleaning.ipynb` and run cells in order:
 1. **Phase 1** — Load data, filter defenders, add flags, save `defensive_combine_clean.csv`
 2. **Phase 2** — Mean career AV by draft round (bar chart)
 3. **Phase 3** — Cornerback 40-yard dash vs career AV (scatter plot and correlation)
+4. **Phase 4** — 40-yard dash vs career AV by defensive group (correlation table and bar chart)
 
 ---
 
