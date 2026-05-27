@@ -2,7 +2,7 @@
 
 Analyzing how NFL Combine measurables and draft position relate to career success for **defensive players**.
 
-**Status:** In progress (Phases 1–4 complete in notebook)
+**Status:** In progress (analysis and Tableau dashboard complete)
 
 ---
 
@@ -62,13 +62,19 @@ How well do combine measurables and draft capital predict NFL career success for
 
 ---
 
+## Dashboard
+
+View the interactive Tableau dashboard: [NFL Defensive Combine Analytics](https://public.tableau.com/views/NFLDefensiveCombineAnalytics/NFLDefensiveCombineDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+---
+
 ## Planned deliverables
 
 - [x] Cleaned defensive-player dataset (`:data/defensive_combine_clean.csv`)
 - [x] Draft round vs career AV analysis (`:notebooks/data_cleaning.ipynb`, Phase 2)
 - [x] Cornerback 40-yard dash vs career AV (Phase 3)
 - [x] Defensive group 40-yard dash vs career AV comparison (Phase 4)
-- [ ] Interactive dashboard (TBD: Power BI / Tableau / Streamlit)
+- [x] Interactive Tableau dashboard
 - [x] Key findings in this README (updated as analysis progresses)
 
 ---
@@ -77,14 +83,14 @@ How well do combine measurables and draft capital predict NFL career success for
 
 - Python, pandas, matplotlib
 - Jupyter Notebook
-- (Dashboard tool TBD)
+- Tableau Public
 
 ---
 
 ## Repository structure
 
 ```
-:data/              Raw CSV and cleaned defensive dataset
+:data/              Raw CSV, cleaned defensive dataset, and Tableau summary CSV
 :notebooks/         Analysis notebook (Phases 1–4)
 requirements.txt
 ```
